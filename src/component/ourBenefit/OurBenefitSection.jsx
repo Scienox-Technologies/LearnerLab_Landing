@@ -26,7 +26,7 @@ const OurBenefitSection = () => {
       />
 
       {/* Body of a Section */}
-      <div className="benefit-item-grid-container grid  grid-flow-row lg:grid-flow-col col-start-2 col-span-10 grid-cols-12  gap-y-8 md: gap-x-14 ">
+      <div className="benefit-item-grid-container grid  grid-flow-row lg:grid-flow-col col-start-2 col-span-10 grid-cols-12  gap-y-12 md: gap-x-0 md:gap-x-14 ">
         {benefitData.map((val, index) => {
           return (
             <BenefitItems
@@ -34,6 +34,7 @@ const OurBenefitSection = () => {
               desc={val.desc}
               icon={val.icon}
               index={index}
+              key={`id-${index}`}
             />
           );
         })}
@@ -47,23 +48,24 @@ export default OurBenefitSection;
 const BenefitItems = ({ heading, desc, icon, index }) => {
   return (
     <div
-      className={`benefit-item-container grid  col-span-12 md:col-span-6 lg:col-span-3 gap-y-4  items-start`}
+      className={`benefit-item-container grid  col-span-12 md:col-span-6 lg:col-span-3 gap-y-0 md:gap-y-4  items-start`}
       key={`item-${index}`}
     >
       <div className="benefit-header-mobile grid grid-flow-row col-span-10 grid-cols-12 items-center  lg:hidden">
-        <div className="benefit-item-icon grid col-span-4">{icon}</div>
-        <div className="benefit-item-heading  grid col-span-6 text-[2rem] font-bold leading-[100%] text-left">
+        <div className="benefit-item-icon grid col-span-2 transform scale-50 translate-x-[-1.2rem]">
+          {icon}
+        </div>
+        <div className="benefit-item-heading  grid col-span-6 text-[1.5rem] font-bold leading-[100%] text-left">
           {heading}
         </div>
       </div>
-
 
       <div className="benefit-item-icon hidden lg:flex">{icon}</div>
       <div className="benefit-item-content grid gap-y-4">
         <div className="benefit-item-heading w-2/3 text-[2rem] hidden font-bold leading-[100%] text-left items-end lg:flex">
           {heading}
         </div>
-        <div className="benefit-item-sub-heading text-xl font-semibold text-gray-500 text-justify nowrap">
+        <div className="benefit-item-sub-heading text-md md:text-xl font-semibold text-gray-500 text-justify nowrap">
           {desc}
         </div>
       </div>
