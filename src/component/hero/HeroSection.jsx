@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className="hero-section grid grid-cols-12 gap-5  justify-center items-center h-min-screen h-auto relative auto-cols-auto">
       <div className="hero-heading grid col-span-10 mx-auto "></div>
-      <div className="hero-left-section  grid col-span-12 sm:col-span-10 md:col-start-2  md:col-span-5 max-h-[31rem] items-between order-2 gap-24  md:order-none">
+      <div className="hero-left-section  grid col-start-2 md:col-start-2 col-span-10 sm:col-span-10   md:col-span-5 max-h-[31rem] items-between order-2 gap-24  md:order-none">
         <div className="hero-master-heading text-5xl lg:text-6xl 2xl:text-7xl font-semibold text-center md:text-left break-words whitespace-pre-wrap">
           Elevate your learning experience with{" "}
           <span className="text-orange-600 relative">
@@ -17,26 +17,26 @@ const HeroSection = () => {
           </span>
         </div>
         <div className="hero-sub-heading lg:text-2xl 2xl:text-4xl text-center md:text-left text-gray-400 break-words whitespace-pre-wrap">
-          Transform the way you Learn, Teach & Connect with Jageo's Innovative
+          Transform the way you Learn, Teach & Connect with Learner Lab's Innovative
           Solutions.
         </div>
         <div className="get-started-button text-center md:text-left ">
-          <button className="btn-get-started text-2xl font-semibold w-[19rem] h-[4rem] rounded-full bg-black text-neutral-50 relative">
+          {/* <button className="btn-get-started text-2xl font-semibold w-[19rem] h-[4rem] rounded-full bg-black text-neutral-50 relative">
             Get Started
-            {/* <span className="image-doodle-1 absolute right-[-8rem] bottom-[1rem]">
+            <span className="image-doodle-1 absolute right-[-8rem] bottom-[1rem] hidden md:flex">
               <ArrowOne />
-            </span> */}
-          </button>
+            </span>
+          </button> */}
         </div>
       </div>
       <div
-        className="hero-right-section  grid col-span-12 sm:col-span-10 md:col-span-5 min-h-[48rem] shrink bg-contain bg-right bg-no-repeat"
+        className="hero-right-section  col-start-2 grid col-span-10 sm:col-span-10 md:col-span-5 min-h-[48rem] shrink bg-contain bg-right bg-no-repeat"
         style={{ backgroundImage: `url(${Hero})` }}
       ></div>
-      {/* <div className="image-doodle-1 absolute left-[12rem] bottom-[16rem]">
+      {/* <div className="image-doodle-1 absolute  md:left-[12rem] bottom-[16rem] transform scale-[65%] translate-x-[-16rem] lg:transform-none">
         <BookPath />
       </div> */}
-      <div className="stats-container grid md:col-start-2 col-span-12 sm:col-span-10 h-[7rem] md:h-[9.5rem] items-center justify-arund bg-orange-600 rounded-md mt-32 order-3 md:order-none">
+      <div className="stats-container grid col-start-2 sm:col-start-2 col-span-10 sm:col-span-10 h-[7rem] md:h-[9.5rem] items-center justify-arund bg-orange-600 rounded-md mt-32 order-3 md:order-none">
         <div className="stat-item-container grid  col-span-2  text-center border-r-2 border-white h-[5.8rem]">
           <div className="stat-item-fig font-semibold text-2xl md:text-3xl text-white">
             2k+

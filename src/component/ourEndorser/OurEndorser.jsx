@@ -6,7 +6,7 @@ const OurEndorser = () => {
   return (
     <section
       id="our-endorser"
-      className="our-endorser-section-container grid grid-cols-12  gap-5 gap-y-16"
+      className="our-endorser-section-container grid grid-cols-12  gap-x-5 gap-y-44"
     >
       {/* Heading of Section */}
       <SectionHeader
@@ -14,7 +14,7 @@ const OurEndorser = () => {
         subHeading={"Professional Learning Solutions, Simplified"}
         polyHeader={<Polyhead color="orange" />}
         headerDoodle={<DoodleReact />}
-        left="120px"
+        left="250px"
         bottom="24rem"
       />
 
@@ -27,6 +27,7 @@ const OurEndorser = () => {
               path={val.path}
               msg={val.msg}
               index={index}
+              key={`id-end-${index}`}
             />
           );
         })}
